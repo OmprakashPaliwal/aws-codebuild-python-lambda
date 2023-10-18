@@ -12,7 +12,7 @@ phases:
       - zip -r deployment-package.zip .
   post_build:
     commands:
-      - aws lambda update-function-code --function-name your-lambda-function-name --zip-file fileb://deployment-package.zip
+      - aws lambda update-function-code --function-name aws-codebuild-python-lambda --zip-file fileb://deployment-package.zip
 
 artifacts:
   files: deployment-package.zip
